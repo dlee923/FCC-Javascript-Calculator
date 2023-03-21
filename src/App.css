@@ -55,7 +55,7 @@
   display: flex;
   /* background-color: green; */
   justify-content: flex-end;
-  align-items: end;
+  align-items: flex-end;
   font-size: 25px;
   height: 60%;
 }
@@ -73,9 +73,7 @@
   width: calc(var(--button-width) * 2);
   height: var(--button-height);
   background-color: var(--color-ac);
-  border-style: solid;
-  border-color: var(--color-display);
-  border-width: 0 0 1px 1px;
+  outline: 1px solid black;
 }
 
 .calculator-buttons-bottom-section {
@@ -86,18 +84,14 @@
   height: var(--button-height);
   width: var(--button-width);
   background-color: var(--color-numbers);
-  border-style: solid;
-  border-color: var(--color-display);
-  border-width: 0 0 1px 1px;
+  outline: 1px solid var(--color-display);
 }
 
 .calculator-button-number-zero {
   height: calc(var(--button-height));
   width: calc(var(--button-width) * 2);  
   background-color: var(--color-numbers);
-  border-style: solid;
-  border-color: var(--color-display);
-  border-width: 0 0 1px 1px;
+  outline: 1px solid var(--color-display);
 }
 
 .calculator-buttons-functions {
@@ -109,18 +103,14 @@
   height: calc(var(--button-height) * 2);
   width: var(--button-width);
   background-color: var(--color-equals);
-  border-style: solid;
-  border-color: var(--color-display);
-  border-width: 0 0 1px 1px;
+  outline: 1px solid var(--color-display);
 }
 
 .calculator-button-function{
   height: var(--button-height);
   width: var(--button-width);
   background-color: var(--color-functions);
-  border-style: solid;
-  border-color: var(--color-display);
-  border-width: 0 0 1px 1px;
+  outline: 1px solid var(--color-display);
 }
 
 .signature {
@@ -131,7 +121,7 @@
 
 button:hover {
   color: var(--color-display);
-  border-color: rgb(150, 150, 150);
-  border-width: 1px;
-  transform: scale(1.01);
+  transform: scale(1.005);
+  outline: 1px solid rgb(150, 150, 150);
+  
 }

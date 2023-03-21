@@ -5,11 +5,32 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      algorithim: "aa",
+      algorithm: "",
       input: "ii",
       result: "rr",
-      inputResult: "irir"
-    }
+      inputResult: "0"
+    };
+    this.clearDisplay = this.clearDisplay.bind(this);
+    this.updateAlgorithm.bind(this);
+    this.equals.bind(this);
+  }
+
+  updateAlgorithm(withNumber) {
+    const newAlgorithm = this.algorithm + withNumber
+    this.setState({
+      algorithm: newAlgorithm
+    });        
+  }
+
+  clearDisplay() {
+    this.setState({
+      algorithm: "",
+      inputResult: "0"
+    });
+  }
+
+  equals() {
+
   }
 
   render() {
@@ -17,12 +38,12 @@ class App extends React.Component {
       <div className="App">
         <div className="calculator-container">
           <div className="calculator-display">
-            <p className="calculator-display-algo">{this.state.algorithim}</p>
+            <p className="calculator-display-algo">{this.state.algorithm}</p>
             <p className="calculator-display-inputresult">{this.state.inputResult}</p>
           </div>
           <div className="calculator-buttons">
             <div className="calculator-buttons-top-section">
-              <button className="calculator-button-ac">AC</button>
+              <button className="calculator-button-ac" onClick={this.clearDisplay}>AC</button>
               <button className="calculator-button-function">/</button>
               <button className="calculator-button-function">x</button>              
             </div>
