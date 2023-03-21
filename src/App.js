@@ -1,11 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      algorithim: "aa",
+      input: "ii",
+      result: "rr",
+      inputResult: "irir"
+    }
   }
 
   render() {
@@ -13,7 +17,8 @@ class App extends React.Component {
       <div className="App">
         <div className="calculator-container">
           <div className="calculator-display">
-            <p className="calculator-display-text"></p>
+            <p className="calculator-display-algo">{this.state.algorithim}</p>
+            <p className="calculator-display-inputresult">{this.state.inputResult}</p>
           </div>
           <div className="calculator-buttons">
             <div className="calculator-buttons-top-section">

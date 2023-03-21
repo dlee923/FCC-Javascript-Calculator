@@ -37,12 +37,32 @@
 }
 
 .calculator-display {
-  height: var(--button-height);
+  height: calc(var(--button-height) * 0.7);
   background-color: var(--color-display);
+  color: white;
+  padding: 0px 0px 5px 0px;
+  text-align: end;
+}
+
+.calculator-display-algo {
+  /* background-color: gray; */
+  height: 40%;
+  color: orange;
+  font-size: 15px;
+}
+
+.calculator-display-inputresult {
+  display: flex;
+  /* background-color: green; */
+  justify-content: flex-end;
+  align-items: end;
+  font-size: 25px;
+  height: 60%;
 }
 
 .calculator-buttons * {
   color: white;
+  font-size: 15px;
 }
 
 .calculator-buttons-top-section * {  
